@@ -1,0 +1,135 @@
+.omp-skills-list {
+  min-width: 0;
+}
+
+.omp-skills-card {
+  display: block;
+  width: 100%;
+  height: calc(3 * var(--sf-lh));
+  padding: calc(0.5 * var(--sf-lh)) 8px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  box-shadow: none;
+  color: var(--tv-fg, var(--t1));
+  text-align: left;
+}
+
+.omp-skills-card:hover,
+.omp-skills-card:focus-visible {
+  background: var(--l1);
+}
+
+.omp-skills-name,
+.omp-skills-description {
+  height: var(--sf-lh);
+  overflow: hidden;
+  line-height: var(--sf-lh);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.omp-skills-name {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.omp-skills-description {
+  color: var(--t3);
+  font-size: 0.9em;
+}
+
+.omp-skills-toolbar,
+.omp-skills-footer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  width: 100%;
+}
+
+.omp-skills-query {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--t3);
+  font-size: 0.85em;
+}
+
+.omp-skills-footer {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.omp-skills-footer > :first-child,
+.omp-skills-count {
+  flex-shrink: 0;
+}
+
+.omp-skills-page {
+  white-space: nowrap;
+}
+
+.omp-skills-count {
+  color: var(--t3);
+  white-space: nowrap;
+  text-align: right;
+}
+
+.omp-skills-message {
+  padding: 8px;
+  overflow-wrap: anywhere;
+}
+
+/* 与 History 相同的工具栏挂载方式，Skills 入口向左错开一个按钮。 */
+html.tn-widgets #widgetbar {
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  height: auto !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  padding-bottom: 3px !important;
+  z-index: 100 !important;
+  overflow: visible !important;
+  pointer-events: none !important;
+}
+
+html.tn-widgets #widgetbar > * {
+  pointer-events: auto !important;
+}
+
+html.tn-widgets #widgetbar .wg-row {
+  overflow: visible !important;
+}
+
+html.tn-widgets #tabbar .tb-in {
+  padding-right: 64px !important;
+}
+
+#widgetbar .wg[title="显示/隐藏 OMP Skills"] {
+  position: fixed;
+  top: 6px;
+  right: 46px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#widgetbar .wg[title="显示/隐藏 OMP Skills"]:hover {
+  background: var(--l1);
+  color: var(--t1);
+}
+
+#widgetbar .wg[title="显示/隐藏 OMP Skills"] .wg-ico svg {
+  width: 14px;
+  height: 14px;
+}

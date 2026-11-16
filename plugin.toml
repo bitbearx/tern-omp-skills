@@ -1,0 +1,8 @@
+schema = 1
+id = "omp-skills"
+name = "OMP Skills"
+version = "0.1.0"
+description = "Browse, search and copy installed OMP skills from a sidebar."
+icon = "search"
+window = "window.luau"
+styles = ["skills.css"]
